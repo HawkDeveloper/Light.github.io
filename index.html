@@ -19,6 +19,7 @@
     <title>Light</title>
 </head>
 <body>
+  
 <!-- Header -->
     <header class="header">
         <div class="container">
@@ -35,22 +36,35 @@
                         <li><a class="nav__link active" href="#">Home</a></li> 
                         <li><a class="nav__link" href="#">Company</a></li> 
                         <li><a class="nav__link" href="#">Features</a></li> 
-                        <li><button id="signIn" class="btn btn--active">Sign In</button></li> 
+                        <li><button data-btn='1' id="btnSign" class="btn btn--active">Sign In</button>
+                          
+                        </li> 
+                        <li class="dropdown__av">
+                          <img  class="dropbtn" id="dropbtn" src="img/Ellipse 1intro1.png" alt="">
+                          <ul id="myDropdown" class="dropdown-content__av">
+                            <li><a href="#home">Profile</a></li>
+                           <li><a href="#about">Cards</a></li>
+                           <li><a href="#contact" id="logOut">Log Out</a></li>
+                          </ul>
+                        </li>
                         </ul> 
+                        
                       </nav>
                   </div>
-
-                  <div class="sign__modal" id="signModal">
+                  <div class="wrapper "></div>
+                    <div class="modal-window  js-modal" data-btn='1'>
                       <div class="sign-in">
                         <span class="close">&times;</span>
                         <form class="sign-in__form">
                           <h2 class="form-title">Sign in</h2>
-                          <input class="form-email" placeholder="Email or username" type="text" />
+                          <input class="form-email" id="i1" placeholder="Email or username" type="text" />
                           <input class="form-password" placeholder="Password" type="password" />
-                          <button class="form-btn">Sign in</button>
+                          <button id="submit" class="form-btn" type="button">Sign in</button>
                         </form>
                       </div>
-                  </div>
+                    </div>
+                  
+                  
             </div>
         </div>
       <img class="ellipse__header" src="img/Ellipse 8header.svg" alt="">
@@ -68,8 +82,8 @@
                         visual</h1>
                     <div class="intro__text"><p>With virtual technology you can see the digital world  feel more real and you can play the game with a new  style.</p></div>
 
-                    <button class="btn btn--active">Get it now</button>
-                    <button class="btn">Explore Device</button>
+                    <button data-btn='2' class="btn btn--active">Get it now</button>
+                    <button id="exp" class="btn">Explore Device</button>
 
                     <div class="intro__people">
                       <ul class="intro__people-list">
@@ -103,6 +117,22 @@
                 </div> 
             </div> 
             
+              <div class="modal-window  js-modal" id="modal-window" data-btn='2'>
+                    <div class="adding-card">
+                      <div class="container">
+                        <span class="close">&times;</span>
+                          <h2 class="adding-card__title">Realities cards</h2>
+                          <form class="adding-card__form">
+                              <h2 class="adding-card__form-name">Add new card</h2>
+                              <input class="adding-card__form-input" placeholder="Card name" type="text" />
+                              <input class="adding-card__form-input" placeholder="Card description" type="text" />
+                              <input class="adding-card__form-input" placeholder="Card image name" type="text" />
+                              <button type="button" id="add" class="adding-card__form-btn">Add</button>
+                          </form>
+                      </div>
+                  </div>    
+              </div>
+            
         </div>
         <img class="ellipse__intro" src="img/Ellipse 6intro.svg" alt="">
 
@@ -127,7 +157,7 @@
                     feel, like you are the main character 
                     in your game and adventure in this 
                     new digital world.</p></div>
-                <button class="btn btn--active">Get it now</button>
+                <button id="getIt" data-btn='2' class="btn btn--active">Get it now</button>
             </div>
         </div>
     </div>
@@ -154,17 +184,26 @@
             <h3 class="headsets__title">Mixed Reality Headsets</h3>
 
             <div class="dropdown">
-                <button class="dropbtn">First start</button>
+                <button id="btn" class="dropbtn__filter">First start</button>
                 <div class="dropdown-content">
-                    <a href="#">First start</a>
-                    <a href="#">First end</a>
+                    <a>First start</a>
+                    <a>First end</a>
                 </div>
             </div>
             
         </div> <!--/headsets__inner-->
-
+        <div class="modal-window  js-modal" data-btn='3'>
+            <div class="item__page">
+            <span class="close">&times;</span>
+              <div class="container">
+                  <img class="item__page__photo" src="img/Rectangle 33item_page.png" alt="">
+                  <div class="item__page__title">Metaverse</div>
+                  <div class="item__page__text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo earum qui omnis dolorum vitae facilis nisi quibusdam voluptate optio iusto dolorem, reprehenderit id, quisquam eveniet suscipit exercitationem. Pariatur, sunt quos? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi est alias quas provident doloremque esse sed fuga veniam at fugit amet, vitae sit rem consectetur autem saepe deserunt ipsum modi.</p></div>
+              </div>
+          </div>
+        </div>
         <ul class="headsets__item">
-            <li class="headsets__item-set">
+            <li class="btn btn--headsets__item-set" data-btn='3'>
               <img src="img/Rectangle 33.png" class="item-set__photo" alt="photo" />
               <div class="item-set__dscr">
                 <h5 class="item-set__dscr-name">Metaverse</h5>
@@ -173,7 +212,7 @@
                 </p>
               </div>
             </li>
-            <li class="headsets__item-set">
+            <li class="btn btn--headsets__item-set" data-btn='3'>
               <img src="img/Rectangle 33.png" class="item-set__photo" alt="photo" />
               <div class="item-set__dscr">
                 <h5 class="item-set__dscr-name">Metaverse</h5>
@@ -182,7 +221,7 @@
                 </p>
               </div>
             </li>
-            <li class="headsets__item-set">
+            <li class="btn btn--headsets__item-set" data-btn='3'>
               <img src="img/Rectangle 33.png" class="item-set__photo" alt="photo" />
               <div class="item-set__dscr">
                 <h5 class="item-set__dscr-name">Metaverse</h5>
@@ -191,7 +230,7 @@
                 </p>
               </div>
             </li>
-            <li class="headsets__item-set">
+            <li class="btn btn--headsets__item-set" data-btn='3'>
               <img src="img/Rectangle 33.png" class="item-set__photo" alt="photo" />
               <div class="item-set__dscr">
                 <h5 class="item-set__dscr-name">Metaverse</h5>
@@ -200,7 +239,7 @@
                 </p>
               </div>
             </li>
-            <li class="headsets__item-set">
+            <li class="btn btn--headsets__item-set" data-btn='3'>
               <img src="img/Rectangle 33.png" class="item-set__photo" alt="photo" />
               <div class="item-set__dscr">
                 <h5 class="item-set__dscr-name">Metaverse</h5>
@@ -209,7 +248,7 @@
                 </p>
               </div>
             </li>
-            <li class="headsets__item-set">
+            <li class="btn btn--headsets__item-set" data-btn='3'>
               <img src="img/Rectangle 33.png" class="item-set__photo" alt="photo" />
               <div class="item-set__dscr">
                 <h5 class="item-set__dscr-name">Metaverse</h5>
@@ -258,6 +297,9 @@
             </div>
           </div>
         </li>
+        
+        <img class="arrow arrow__left" src="img/Vector 12arrowleft.svg" alt="">
+  
         <li class="item-fb__card">
           <h5 class="card-logo"><span class="card-logo__span">starstar</span>star</h5>
           <p class="card-text">
@@ -286,6 +328,8 @@
             </div>
           </div>
         </li>
+        <img class="arrow" src="img/Vector 13arrowright.svg" alt="">
+
       </ul>
     </div>
     <img class="ellipse__addc" src="img/Ellipse 8adventCen.png" alt="">
@@ -347,7 +391,7 @@
 
                 <form class="explore__form"action="">
                     <div class="form__input"><input class="input" type="text" placeholder="Your Email"></div>
-                    <button id="start" class="btn btn--active">Start <span><img src="img/Vectorarrow.png" alt="" width="7px" height="7px"></span></button>
+                    <button type="button" id="email" class="btn btn--active">Start <span><img src="img/Vectorarrow.png" alt=""></span></button>
                 </form>
             </div>
 
